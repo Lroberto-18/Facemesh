@@ -27,8 +27,8 @@ class face_mesh_detection():
             try:
                 for self.face_landmarks in self.results.multi_face_landmarks:
                     self.mp_draw.draw_landmarks(self.image_RGB, self.face_landmarks, self.mp_face_mesh.FACEMESH_CONTOURS, 
-                    landmark_drawing_spec = self.mp_draw.DrawingSpec(color=(20,50,50), thickness=1,circle_radius=1),
-                    connection_drawing_spec= self.mp_draw.DrawingSpec(color=(0,0,255), thickness=1))
+                                                landmark_drawing_spec = self.mp_draw.DrawingSpec(color=(20,50,50), thickness=1,circle_radius=1),
+                                                connection_drawing_spec= self.mp_draw.DrawingSpec(color=(0,0,255), thickness=1))
             except:
                 pass
         return self.image_RGB
