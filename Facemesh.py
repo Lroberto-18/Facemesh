@@ -3,6 +3,7 @@ import numpy as np
 import mediapipe as mp
 import random
 
+
 class face_mesh_detection():
     def __init__(self, static_image_mode=False,
                max_num_faces=1,
@@ -32,6 +33,7 @@ class face_mesh_detection():
             except:
                 pass
         return self.image_RGB
+    
 
     def find_positons(self, image):
         list_points = []
@@ -44,6 +46,7 @@ class face_mesh_detection():
         except:
             pass
         return list_points
+    
 
     def draw_by_id(self, image, id):
         height, width, _ = image.shape
@@ -57,6 +60,7 @@ class face_mesh_detection():
         except:
             pass
         return image
+    
 
 def main():
     cap = cv2.VideoCapture(0)
@@ -78,5 +82,6 @@ def main():
     cap.release()
     cv2.destroyAllWindows()       
 
+    
 if __name__=="__main__":
     main()
